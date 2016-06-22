@@ -16,7 +16,12 @@ attr_reader(:name, :type, :id)
   end
 
   
- 
+ def find_petshop_by_id(id)
+   sql = "SELECT name FROM pets WHERE id = '#{id}';"
+   pet = @runner.run(sql)
+   find_pet = pet.map { |shop| shop["name"] }
+   print find_pet
+ end
 
   def find_pet_by_id
   end
