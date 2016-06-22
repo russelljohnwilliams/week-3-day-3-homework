@@ -35,7 +35,7 @@ pet4.save()
 pet5.save()
 pet6.save()
 
-pet1.find_petshop_by_id(2)
+pet1.find_pet_by_id(4)
 
 # petshop1.find_petshop_by_id(2)
 

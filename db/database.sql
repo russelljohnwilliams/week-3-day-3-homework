@@ -4,6 +4,7 @@ DROP TABLE petshops;
 CREATE TABLE petshops (
   id SERIAL4 primary key,
   name VARCHAR(255)
+  type VARCHAR(255)
 );
 
 CREATE TABLE pets (

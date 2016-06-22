@@ -14,12 +14,11 @@ attr_reader(:name, :type, :id)
     sql = "INSERT INTO pets (name, type, petshop_id) VALUES ('#{@name}', '#{@type}', '#{@petshop_id}');"
     @runner.run(sql)
   end
-
   
- def find_petshop_by_id(id)
-   sql = "SELECT name FROM pets WHERE id = '#{id}';"
+ def find_pet_by_id(id)
+   sql = "SELECT * FROM pets WHERE id = '#{id}';"
    pet = @runner.run(sql)
-   find_pet = pet.map { |shop| shop["name"] }
+   find_pet = pet.map { |pet| pet['name']}
    print find_pet
  end
 
